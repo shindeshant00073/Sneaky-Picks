@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puma</title>
+    <style>
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('https://clipground.com/images/puma-logo-clipart-white-5.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .bar {
+            background-color: #4e3434;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .bar h1 {
+            color: black;
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .back-button {
+            font-size: 1em;
+            text-decoration: none;
+            color: rgba(194, 42, 22, 0.475);
+            border: 2px solid rgb(181, 104, 49);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            position: absolute;
+            left: 10px;
+        }
+
+        .back-button:hover {
+            background-color: #c14537;
+            color: white;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+            width: 600px;
+            height: 600px;
+            margin-left: 650px;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 10px;
+            width: 40%;
+            text-align: center;
+            padding: 7px;
+            transition: transform 0.3s;
+        }
+
+        .product img {
+            max-width: 60%;
+            border-radius: 10px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .cart-icon, .favorite-icon {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <a href="index.html" class="back-button">Back</a>
+        <h1>Puma</h1>
+    </div>
+    <div class="products">
+        <div class="product">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/21/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kid's-Walking-Shoes" alt="Product 1">
+            <div class="product-name">Softride Rift Pop Shoes</div>
+            <div>Rs 4000</div>
+            <div class="product-icons">
+                <span><img src="https://cdn-icons-png.flaticon.com/128/891/891407.png" alt="Add to Cart" title="Add to Cart" class="cart-icon" onclick="addToCart('Softride Rift Pop Shoes', 4000, 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/21/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kids-Walking-Shoes')"></span>
+                <span><img src="https://cdn-icons-png.flaticon.com/128/4340/4340223.png" alt="Add to Favorites" title="Add to Favorites" class="favorite-icon" onclick="addToWishlist('Softride Rift Pop Shoes', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/21/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kids-Walking-Shoes')"></span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/15/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kid's-Walking-Shoes" alt="Product 2">
+            <div class="product-name">Softride Shoes</div>
+            <div>Rs 1000</div>
+            <div class="product-icons">
+                <span><img src="https://cdn-icons-png.flaticon.com/128/891/891407.png" alt="Add to Cart" title="Add to Cart" class="cart-icon" onclick="addToCart('Softride Shoes', 1000, 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/15/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kids-Walking-Shoes')"></span>
+                <span><img src="https://cdn-icons-png.flaticon.com/128/4340/4340223.png" alt="Add to Favorites" title="Add to Favorites" class="favorite-icon" onclick="addToWishlist('Softride Shoes', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/15/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kids-Walking-Shoes')"></span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/01/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kid's-Walking-Shoes" alt="Product 3">
+            <div class="product-name">Softride Kids Shoes</div>
+            <div>Rs 2500</div>
+            <div class="product-icons">
+                <span><img src="https://cdn-icons-png.flaticon.com/128/891/891407.png" alt="Add to Cart" title="Add to Cart" class="cart-icon" onclick="addToCart('Softride Kids Shoes', 2500, 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/01/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kids-Walking-Shoes')"></span>
+                <span><img src="https://cdn-icons-png.flaticon.com/128/4340/4340223.png" alt="Add to Favorites" title="Add to Favorites" class="favorite-icon" onclick="addToWishlist('Softride Kids Shoes', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/194773/01/sv01/fnd/IND/fmt/png/Softride-Rift-Pop-Kids-Walking-Shoes')"></span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/195569/01/sv01/fnd/IND/fmt/png/Softride-Enzo-Nxt-Youth-Running-Shoes" alt="Product 4">
+            <div class="product-name">Softride Enzo Youth Running Shoes</div>
+            <div>Rs 1000</div>
+            <div class="product-icons">
+                <span><img src="https://cdn-icons-png.flaticon.com/128/891/891407.png" alt="Add to Cart" title="Add to Cart" class="cart-icon" onclick="addToCart('Softride Enzo Youth Running Shoes', 1000, 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/195569/01/sv01/fnd/IND/fmt/png/Softride-Enzo-Nxt-Youth-Running-Shoes')"></span>
+                <span><img src="https://cdn-icons-png.flaticon.com/128/4340/4340223.png" alt="Add to Favorites" title="Add to Favorites" class="favorite-icon" onclick="addToWishlist('Softride Enzo Youth Running Shoes', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/195569/01/sv01/fnd/IND/fmt/png/Softride-Enzo-Nxt-Youth-Running-Shoes')"></span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/378397/03/sv01/fnd/IND/fmt/png/SOFTRIDE-Enzo-Evo-Slip-On-Youth-Shoes" alt="Product 5">
+            <div class="product-name">Softride Enzo Evo Shoes</div>
+            <div>Rs 900</div>
+            <div class="product-icons">
+                <span><img src="https://cdn-icons-png.flaticon.com/128/891/891407.png" alt="Add to Cart" title="Add to Cart" class="cart-icon" onclick="addToCart('Softride Enzo Evo Shoes', 900, 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/378397/03/sv01/fnd/IND/fmt/png/SOFTRIDE-Enzo-Evo-Slip-On-Youth-Shoes')"></span>
+                <span><img src="https://cdn-icons-png.flaticon.com/128/4340/4340223.png" alt="Add to Favorites" title="Add to Favorites" class="favorite-icon" onclick="addToWishlist('Softride Enzo Evo Shoes', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/378397/03/sv01/fnd/IND/fmt/png/SOFTRIDE-Enzo-Evo-Slip-On-Youth-Shoes')"></span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/379988/02/sv01/fnd/IND/fmt/png/Scorch-Runner-V2-Men's-Running-Shoes" alt="Product 6">
+            <div class="product-name">Scorch Runner V2 Shoes</div>
+            <div>Rs 2100</div>
+            <div class="product-icons">
+                <span><img src="https://cdn-icons-png.flaticon.com/128/891/891407.png" alt="Add to Cart" title="Add to Cart" class="cart-icon" onclick="addToCart('Scorch Runner V2 Shoes', 2100, 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/379988/02/sv01/fnd/IND/fmt/png/Scorch-Runner-V2-Mens-Running-Shoes')"></span>
+                <span><img src="https://cdn-icons-png.flaticon.com/128/4340/4340223.png" alt="Add to Favorites" title="Add to Favorites" class="favorite-icon" onclick="addToWishlist('Scorch Runner V2 Shoes', 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/379988/02/sv01/fnd/IND/fmt/png/Scorch-Runner-V2-Mens-Running-Shoes')"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+            // Example: Store product in local storage for demo purposes
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.push({ name: productName, price: productPrice, image: productImage });
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+            // Redirect to cart.html
+            window.location.href = 'cart.html';
+        }
+        function addToWishlist(productName, productImage) {
+        // Example: Store product in local storage for demo purposes
+        let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+        wishlistItems.push({ name: productName, image: productImage });
+        localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+    
+        // Redirect to wishlist.html
+        window.location.href = 'wishlist.html';
+    }
+    </script>
+</body>
+</html>
